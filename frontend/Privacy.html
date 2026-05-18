@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esafe | Privacy Policy Summariser</title>
+    <link rel="stylesheet" href="front-end/design/privacystyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+        <header class="header">
+            <div class="container header-flex">
+                <div class="logo-section">
+                    <h1 class="logo">Esafe</h1>
+                    <p class="tagline">One platform. Total digital defense.</p>
+                </div>
+                <div class="right-actions">
+                    <nav class="nav">
+                        <a href="About.html" class="nav-link">About</a>
+                    </nav>
+                    <button id="themeToggle" class="theme-btn">Dark Mode</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <main>
+                <section class="hero">
+                    <div class="container card card--hero">
+                        <h1>Privacy Policy Summariser</h1>
+                        <p class="tagline">Understand privacy policies and terms of service at a glance</p>
+                    </div>
+                </section>
+
+                <div class="container grid">
+                    <div>
+                        <div class="card">
+                            <div class="input-section">
+                                <textarea id="policyText" placeholder="Please enter the privacy policy or terms of service here..."></textarea>
+                                <div class="button-group contact">
+                                    <button class="contact button btn-primary" onclick="summarizePolicy()">Summarize</button>
+                                    <button class="contact button btn-secondary" onclick="clearInput()">Clear</button>
+                                </div>
+                            </div>
+
+                            <div class="summary-section" id="summarySection">
+                                <h2>Summary Report</h2>
+                                <div id="summaryContent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    <footer class="footer">
+        <div class="container">
+        <p>SDG 16 • Group B18 • Haydar, Ryan, Ali, Muhammad</p>
+        <p>Brunel University London • Dr Alireza Jahani • 2025</p>
+        </div>
+    </footer>
+    <script src="../back-end/privacy.js"></script>
+</body>
+</html>
