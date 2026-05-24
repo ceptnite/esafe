@@ -9,6 +9,8 @@ const ContactForm = () => {
   const [status, setStatus] = useState({ type: '', message: '' });
   const [isLoading, setIsLoading] = useState(false);
 
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8081/api/contact';
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -20,7 +22,9 @@ const ContactForm = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('http://localhost:8081/api/contact', {
+      console.log('Sending to:', API_URL);
+
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,7 +51,7 @@ const ContactForm = () => {
       console.error('Fetch error:', error);
       setStatus({
         type: 'error',
-        message: 'Cannot connect to server. Make sure the backend is running on port 8081.',
+        message: 'Cannot connect to server. Please try again later.',
       });
     } finally {
       setIsLoading(false);
@@ -92,4 +96,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm
+export default ContactForm;
