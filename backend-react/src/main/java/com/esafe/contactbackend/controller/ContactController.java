@@ -25,7 +25,7 @@ import org.slf4j.LoggerFactory;
     "http://localhost:3000", 
     "http://localhost:5500",
     "http://127.0.0.1:5173",
-    "https://esafe-gamma.vercel.app"
+    "https://esafe1487.vercel.app"
 })
 
 public class ContactController {
